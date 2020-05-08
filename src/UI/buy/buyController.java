@@ -2,14 +2,20 @@ package UI.buy;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
-import com.jfoenix.controls.JFXDatePicker;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
-import static jdk.internal.misc.OSEnvironment.initialize;
+import java.io.IOException;
 
 public class buyController {
+
+    @FXML
+    private AnchorPane root;
 
     @FXML
     private Text TextFrom;
@@ -43,9 +49,6 @@ public class buyController {
 
     @FXML
     private Text Price3;
-
-    @FXML
-    private JFXDatePicker DatePicker;
 
     @FXML
     private JFXComboBox<?> ClassPicker;
@@ -113,5 +116,12 @@ public class buyController {
     @FXML
     private JFXButton SearchButton;
 
+    @FXML
+    private JFXButton BackButton;
+
+    @FXML
+    void BackAction(ActionEvent event) throws IOException {
+        root.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/UI/main/main.fxml")));
+    }
 
 }

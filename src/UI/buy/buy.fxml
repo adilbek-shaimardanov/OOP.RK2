@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #aec6cf;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.buy.buyController">
+<AnchorPane fx:id="root" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #aec6cf;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.buy.buyController">
    <children>
       <Text fx:id="TextFrom" layoutX="38.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM">
          <font>
@@ -105,5 +105,6 @@
       </ToolBar>
       <JFXButton fx:id="SearchButton" layoutX="713.0" layoutY="55.0" style="-fx-background-color: #941db8; -fx-font-weight: bold;" text="Search" textFill="WHITE" />
       <DatePicker layoutX="424.0" layoutY="14.0" prefHeight="26.0" prefWidth="156.0" />
+      <JFXButton fx:id="BackButton" layoutX="32.0" layoutY="417.0" onAction="#BackAction" style="-fx-background-color: #941db8; -fx-font-weight: bold;" text="Back to main" textFill="WHITE" />
    </children>
 </AnchorPane>

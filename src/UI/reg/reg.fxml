@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXPasswordField?>
-<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
 <AnchorPane fx:id="root" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #aec6cf;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.reg.SignUpController">
    <children>
-      <PasswordField fx:id="passwordField" layoutX="291.0" layoutY="229.0" prefHeight="19.0" prefWidth="218.0" />
-      <TextField fx:id="usernameField" layoutX="291.0" layoutY="112.0" prefHeight="26.0" prefWidth="218.0" />
       <Text layoutX="313.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up" wrappingWidth="173.33660888671875">
          <font>
             <Font size="50.0" />
          </font>
       </Text>
-      <JFXButton fx:id="sign" layoutX="734.0" layoutY="411.0" onAction="#signin" style="-fx-border-color: black;" text="Sign in" />
-      <JFXButton fx:id="signup" layoutX="334.0" layoutY="367.0" onAction="#singup" prefHeight="49.0" prefWidth="130.0" style="-fx-border-color: black;" text="Registration" />
-      <PasswordField fx:id="passwordField2" layoutX="290.0" layoutY="290.0" prefHeight="19.0" prefWidth="218.0" />
+      <TextField fx:id="usernameField" layoutX="291.0" layoutY="112.0" prefHeight="26.0" prefWidth="218.0" />
       <TextField fx:id="emailField" layoutX="291.0" layoutY="165.0" prefHeight="26.0" prefWidth="218.0" />
+      <PasswordField fx:id="passwordField" layoutX="291.0" layoutY="229.0" prefHeight="19.0" prefWidth="218.0" />
+      <PasswordField fx:id="passwordField2" layoutX="290.0" layoutY="290.0" prefHeight="19.0" prefWidth="218.0" />
+      <JFXButton fx:id="signup" layoutX="334.0" layoutY="367.0" onAction="#singup" prefHeight="49.0" prefWidth="130.0" style="-fx-border-color: black;" text="Registration" />
+      <JFXButton fx:id="sign" layoutX="734.0" layoutY="411.0" onAction="#signin" style="-fx-border-color: black;" text="Sign in" />
       <Text fx:id="errorText" fill="RED" layoutX="312.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email is already taken.">
          <font>
             <Font size="18.0" />
