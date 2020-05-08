@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #aec6cf;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.sign.SignInController">
+   <children>
+      <Text layoutX="319.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign in" wrappingWidth="162.9366455078125">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="signin" layoutX="335.0" layoutY="302.0" onAction="#sign" prefHeight="49.0" prefWidth="130.0" style="-fx-border-color: black;" text="Log in" />
+      <JFXButton fx:id="signup" layoutX="734.0" layoutY="411.0" onAction="#signup" style="-fx-border-color: black;" text="Sign up" />
+      <Text fx:id="errorText" fill="RED" layoutX="279.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login or password is incorrect.">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="login" layoutX="291.0" layoutY="151.0" prefHeight="27.0" prefWidth="218.0" />
+      <PasswordField fx:id="pass" layoutX="291.0" layoutY="225.0" prefHeight="27.0" prefWidth="218.0" />
+      <Text layoutX="248.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
+      <Text layoutX="226.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+   </children>
+</AnchorPane>

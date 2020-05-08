@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #aec6cf;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.buy.buyController">
+   <children>
+      <Text fx:id="TextFrom" layoutX="38.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="TextTo" layoutX="259.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TO">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ToolBar layoutX="32.0" layoutY="328.0" prefHeight="78.0" prefWidth="738.0" style="-fx-border-color: black;">
+         <items>
+            <Text fx:id="CompanyName3" strokeType="OUTSIDE" strokeWidth="0.0" text="CompanyName" translateX="30.0" translateY="-20.0" />
+            <ImageView fx:id="CompanyLogo3" fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true" translateX="-80.0" translateY="-20.0" />
+            <Text fx:id="Date3" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" translateX="140.0" translateY="-22.0" />
+            <JFXButton fx:id="BuyButton3" ripplerFill="BLACK" style="-fx-background-color: #941db8; -fx-font-weight: bold;" text="Buy" textFill="WHITE" translateX="540.0" translateY="17.0" />
+            <Text fx:id="Time3" strokeType="OUTSIDE" strokeWidth="0.0" text="Time" translateX="54.0" translateY="5.0" wrappingWidth="89.66133117675781">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Line startX="-100.0" translateX="30.0" translateY="-10.0" />
+            <Text fx:id="FinalDate3" strokeType="OUTSIDE" strokeWidth="0.0" text="FinalDate" translateX="55.0" translateY="-22.0" />
+            <Text fx:id="FinalTime3" strokeType="OUTSIDE" strokeWidth="0.0" text="FinalTime" translateY="5.0" wrappingWidth="120.86128234863281">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="FlyTime3" strokeType="OUTSIDE" strokeWidth="0.0" text="FlyTime" translateX="-223.0" translateY="-23.0" />
+            <Text fx:id="Price3" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" textAlignment="RIGHT" translateX="70.0" translateY="-18.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </items>
+      </ToolBar>
+      <JFXComboBox fx:id="ClassPicker" layoutX="599.0" layoutY="14.0" prefHeight="26.0" prefWidth="166.0" />
+      <JFXComboBox fx:id="FromPicker" layoutX="118.0" layoutY="13.0" prefHeight="26.0" prefWidth="107.0" promptText="Select..." />
+      <JFXComboBox fx:id="ToPicker" layoutX="303.0" layoutY="13.0" prefHeight="26.0" prefWidth="107.0" promptText="Select..." />
+      <ToolBar layoutX="32.0" layoutY="212.0" prefHeight="78.0" prefWidth="738.0" style="-fx-border-color: black;">
+         <items>
+            <Text fx:id="CompanyName2" strokeType="OUTSIDE" strokeWidth="0.0" text="CompanyName" translateX="30.0" translateY="-20.0" />
+            <ImageView fx:id="CompanyLogo2" fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true" translateX="-80.0" translateY="-20.0" />
+            <Text fx:id="Date2" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" translateX="140.0" translateY="-22.0" />
+            <JFXButton fx:id="BuyButton2" ripplerFill="BLACK" style="-fx-background-color: #941db8; -fx-font-weight: bold;" text="Buy" textFill="WHITE" translateX="540.0" translateY="17.0" />
+            <Text fx:id="Time2" strokeType="OUTSIDE" strokeWidth="0.0" text="Time" translateX="54.0" translateY="5.0" wrappingWidth="89.66133117675781">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Line startX="-100.0" translateX="30.0" translateY="-10.0" />
+            <Text fx:id="FinalDate2" strokeType="OUTSIDE" strokeWidth="0.0" text="FinalDate" translateX="55.0" translateY="-22.0" />
+            <Text fx:id="FinalTime2" strokeType="OUTSIDE" strokeWidth="0.0" text="FinalTime" translateY="5.0" wrappingWidth="120.86128234863281">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="FlyTime2" strokeType="OUTSIDE" strokeWidth="0.0" text="FlyTime" translateX="-223.0" translateY="-23.0" />
+            <Text fx:id="Price2" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" textAlignment="RIGHT" translateX="70.0" translateY="-18.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </items>
+      </ToolBar>
+      <ToolBar layoutX="32.0" layoutY="96.0" prefHeight="78.0" prefWidth="738.0" style="-fx-background-color: white; -fx-border-color: black;">
+         <items>
+            <Text fx:id="CompanyName1" strokeType="OUTSIDE" strokeWidth="0.0" text="CompanyName" translateX="30.0" translateY="-20.0" />
+            <ImageView fx:id="CompanyLogo1" fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true" translateX="-80.0" translateY="-20.0" />
+            <Text fx:id="Date1" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" translateX="140.0" translateY="-22.0" />
+            <JFXButton fx:id="BuyButton1" ripplerFill="BLACK" style="-fx-background-color: #941db8; -fx-font-weight: bold;" text="Buy" textFill="WHITE" translateX="540.0" translateY="17.0" />
+            <Text fx:id="Time1" strokeType="OUTSIDE" strokeWidth="0.0" text="Time" translateX="54.0" translateY="5.0" wrappingWidth="89.66133117675781">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Line startX="-100.0" translateX="30.0" translateY="-10.0" />
+            <Text fx:id="FinalDate1" strokeType="OUTSIDE" strokeWidth="0.0" text="FinalDate" translateX="55.0" translateY="-22.0" />
+            <Text fx:id="FinalTime1" strokeType="OUTSIDE" strokeWidth="0.0" text="FinalTime" translateY="5.0" wrappingWidth="120.86128234863281">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="FlyTime1" strokeType="OUTSIDE" strokeWidth="0.0" text="FlyTime" translateX="-223.0" translateY="-23.0" />
+            <Text fx:id="Price1" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" textAlignment="RIGHT" translateX="70.0" translateY="-18.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </items>
+      </ToolBar>
+      <JFXButton fx:id="SearchButton" layoutX="713.0" layoutY="55.0" style="-fx-background-color: #941db8; -fx-font-weight: bold;" text="Search" textFill="WHITE" />
+      <DatePicker layoutX="424.0" layoutY="14.0" prefHeight="26.0" prefWidth="156.0" />
+   </children>
+</AnchorPane>

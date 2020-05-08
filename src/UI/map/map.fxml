@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #aec6cf;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuButton layoutX="92.0" layoutY="6.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="107.0" text="Select...">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Aktobe" />
+            <MenuItem mnemonicParsing="false" text="Almaty" />
+            <MenuItem mnemonicParsing="false" text="Astana" />
+            <MenuItem mnemonicParsing="false" text="Kokshetau" />
+            <MenuItem mnemonicParsing="false" text="Semey" />
+            <MenuItem mnemonicParsing="false" text="Shymkent" />
+         </items>
+      </MenuButton>
+      <MenuButton layoutX="273.0" layoutY="6.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="107.0" text="Select...">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Aktobe" />
+            <MenuItem mnemonicParsing="false" text="Almaty" />
+            <MenuItem mnemonicParsing="false" text="Astana" />
+            <MenuItem mnemonicParsing="false" text="Kokshetau" />
+            <MenuItem mnemonicParsing="false" text="Semey" />
+            <MenuItem mnemonicParsing="false" text="Shymkent" />
+         </items>
+      </MenuButton>
+      <Text layoutX="14.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="233.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TO">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Pane layoutX="14.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" />
+      <ImageView fitHeight="400.0" fitWidth="711.0" layoutX="14.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: url(&quot;https://i.imgur.com/dfnSlAP.png&quot;);" />
+   </children>
+</AnchorPane>

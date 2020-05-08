@@ -1,0 +1,15 @@
+.button {
+  -fx-border-width: 1, 1;
+  -fx-border-style: solid, segments(1, 1);
+  -fx-border-radius: 25px;	
+  -fx-background-radius: 25px;
+  -fx-text-fill: #fff;
+  -fx-font-family: "Century Gothic", Helvetica, Verdana, sans-serif;
+  -fx-background-color: linear-gradient(to right, #75439c 10%, #904fc4 50%, #75439c);
+  -fx-font-size: 16px;
+  -fx-box-shadow: 0 0 -3px -3px #000;
+}
+
+.button hover{
+	-fx-cursor: pointer;
+}
