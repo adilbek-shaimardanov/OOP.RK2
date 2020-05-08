@@ -25,5 +25,9 @@
             <Font size="18.0" />
          </font>
       </Text>
+      <Text layoutX="253.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
+      <Text layoutX="231.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+      <Text layoutX="190.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Repeat password:" />
+      <Text layoutX="229.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
    </children>
 </AnchorPane>

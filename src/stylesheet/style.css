@@ -7,7 +7,6 @@
   -fx-font-family: "Century Gothic", Helvetica, Verdana, sans-serif;
   -fx-background-color: linear-gradient(to right, #75439c 10%, #904fc4 50%, #75439c);
   -fx-font-size: 16px;
-  -fx-box-shadow: 0 0 -3px -3px #000;
 }
 
 .button hover{
