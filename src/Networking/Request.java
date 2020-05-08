@@ -1,8 +1,9 @@
 package Networking;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Request {
+public class Request implements Serializable {
     private String receiver;
     private String sender;
     private String message;

@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.Date;
 import java.util.Scanner;
+import java.util.prefs.Preferences;
 
 public class Client {
     Scanner scan = new Scanner(System.in);
@@ -20,7 +22,10 @@ public class Client {
     }
 
     public void sendMessage(String text) throws IOException {
-        Request request = new Request("user", null, text, null);
+        Date date = new Date();
+        Preferences pref = Preferences.userRoot().node("/src");
+        String preference = pref.get("login", "");
+        Request request = new Request("user", preference, text, date);
         output.writeObject(request);
 
     }

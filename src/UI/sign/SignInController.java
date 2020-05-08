@@ -12,6 +12,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
+import java.util.prefs.Preferences;
 
 public class SignInController {
 
@@ -45,6 +46,8 @@ public class SignInController {
         if (!email.equals("") || !password.equals("")) {
             if(DataBaseHandler.loginAccount(email, password) != null) {
                 errorText.setVisible(false);
+                Preferences pref = Preferences.userRoot().node("/src");
+                pref.put("login", email);
                 root.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/UI/main/main.fxml")));
             }
             else {
