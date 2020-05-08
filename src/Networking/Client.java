@@ -8,11 +8,15 @@ import java.util.Scanner;
 
 public class Client {
     Scanner scan = new Scanner(System.in);
-    static Socket clientSocket = new Socket("localhost", 6000);
-    static ObjectOutputStream output = new ObjectOutputStream(clientSocket.getOutputStream());
-    static ObjectInputStream input = new ObjectInputStream(clientSocket.getInputStream());
+    Socket clientSocket;
+    ObjectOutputStream output;
+    ObjectInputStream input;
+
 
     public Client() throws IOException {
+        clientSocket = new Socket("localhost", 6000);
+        output = new ObjectOutputStream(clientSocket.getOutputStream());
+        input = new ObjectInputStream(clientSocket.getInputStream());
     }
 
     public void sendMessage(String text) throws IOException {
