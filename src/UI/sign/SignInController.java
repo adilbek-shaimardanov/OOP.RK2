@@ -1,5 +1,6 @@
 package UI.sign;
 
+import Networking.Client;
 import Networking.DataBaseHandler;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -31,6 +32,7 @@ public class SignInController {
     @FXML
     private JFXButton signup;
 
+
     @FXML
     private Text errorText;
 
@@ -45,6 +47,7 @@ public class SignInController {
         String password = pass.getText();
         if (!email.equals("") || !password.equals("")) {
             if(DataBaseHandler.loginAccount(email, password) != null) {
+                Client client = new Client();
                 errorText.setVisible(false);
                 Preferences pref = Preferences.userRoot().node("/src");
                 pref.put("login", email);

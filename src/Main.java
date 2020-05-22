@@ -11,7 +11,6 @@ public class Main extends Application{
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/UI/sign/sign.fxml"));
         Scene scene = new Scene(root, 800, 450);
-       /* scene.getStylesheets().add(getClass().getResource("stylesheet/style.css").toExternalForm());*/
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(scene);
         primaryStage.show();

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -11,26 +10,7 @@
 
 <AnchorPane fx:id="root" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #aec6cf;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.map.mapController">
    <children>
-      <MenuButton layoutX="92.0" layoutY="6.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="107.0" text="Select...">
-         <items>
-            <MenuItem mnemonicParsing="false" text="Aktobe" />
-            <MenuItem mnemonicParsing="false" text="Almaty" />
-            <MenuItem mnemonicParsing="false" text="Astana" />
-            <MenuItem mnemonicParsing="false" text="Kokshetau" />
-            <MenuItem mnemonicParsing="false" text="Semey" />
-            <MenuItem mnemonicParsing="false" text="Shymkent" />
-         </items>
-      </MenuButton>
-      <MenuButton layoutX="273.0" layoutY="6.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="107.0" text="Select...">
-         <items>
-            <MenuItem mnemonicParsing="false" text="Aktobe" />
-            <MenuItem mnemonicParsing="false" text="Almaty" />
-            <MenuItem mnemonicParsing="false" text="Astana" />
-            <MenuItem mnemonicParsing="false" text="Kokshetau" />
-            <MenuItem mnemonicParsing="false" text="Semey" />
-            <MenuItem mnemonicParsing="false" text="Shymkent" />
-         </items>
-      </MenuButton>
+      <JFXButton fx:id="ataNUR11" layoutX="432.0" layoutY="155.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
       <Text layoutX="14.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM">
          <font>
             <Font size="20.0" />
@@ -44,5 +24,45 @@
       <Pane layoutX="14.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" />
       <ImageView fitHeight="400.0" fitWidth="711.0" layoutX="14.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: url(&quot;https://i.imgur.com/dfnSlAP.png&quot;);" />
       <JFXButton fx:id="BackButton" layoutX="14.0" layoutY="410.0" onAction="#BackAction" style="-fx-background-color: #941db8; -fx-font-weight: bold;" text="Back to main" textFill="WHITE" />
+      <JFXComboBox fx:id="FromPicker" layoutX="98.0" layoutY="6.0" onMouseClicked="#fromClicked" prefHeight="26.0" prefWidth="107.0" promptText="Select..." />
+      <JFXComboBox fx:id="ToPicker" layoutX="287.0" layoutY="6.0" onMouseClicked="#toClicked" prefHeight="26.0" prefWidth="107.0" promptText="Select..." />
+      <JFXButton fx:id="ata" layoutX="546.0" layoutY="329.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: blue;" text=" " />
+      <JFXButton fx:id="ataNURshy2" layoutX="519.0" layoutY="324.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataNURshy3" layoutX="491.0" layoutY="320.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataNUR4" layoutX="465.0" layoutY="309.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataNUR5" layoutX="467.0" layoutY="281.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataNUR6" layoutX="480.0" layoutY="256.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataNUR7" layoutX="483.0" layoutY="232.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataNUR8" layoutX="468.0" layoutY="212.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataNUR9" layoutX="457.0" layoutY="190.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataNUR10" layoutX="455.0" layoutY="166.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton layoutX="328.0" layoutY="212.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="showInfo" layoutX="420.0" layoutY="9.0" onAction="#ShowInfo" style="-fx-background-color: #941db8; -fx-font-weight: bold;" text="Show info" textFill="WHITE" />
+      <JFXButton fx:id="ataSEM2" layoutX="549.0" layoutY="302.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataSEM3" layoutX="550.0" layoutY="290.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataSEM4" layoutX="556.0" layoutY="275.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataSEM5" layoutX="560.0" layoutY="269.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataSEM6" layoutX="566.0" layoutY="258.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataSEM7" layoutX="572.0" layoutY="249.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataSEM8" layoutX="576.0" layoutY="229.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataSEM9" layoutX="581.0" layoutY="212.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataSEM10" layoutX="581.0" layoutY="194.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataSEM11" layoutX="584.0" layoutY="179.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataSEM12" layoutX="582.0" layoutY="162.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="sem" layoutX="570.0" layoutY="150.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: blue;" text=" " />
+      <JFXButton fx:id="shy" layoutX="419.0" layoutY="367.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: blue;" text=" " />
+      <JFXButton fx:id="kok" layoutX="396.0" layoutY="99.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: blue;" text=" " />
+      <JFXButton fx:id="ast" layoutX="432.0" layoutY="152.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: blue;" text=" " />
+      <JFXButton fx:id="ataSHY5" layoutX="454.0" layoutY="329.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataSHY6" layoutX="437.0" layoutY="349.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="ataSHY4" layoutX="470.0" layoutY="316.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="kokNURsem2" layoutX="407.0" layoutY="116.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="kokNURsem3" layoutX="419.0" layoutY="133.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="kokSEM4" layoutX="448.0" layoutY="143.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="kokSEM5" layoutX="474.0" layoutY="134.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="kokSEM6" layoutX="499.0" layoutY="128.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="kokSEM7" layoutX="516.0" layoutY="113.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="kokSEM8" layoutX="530.0" layoutY="133.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
+      <JFXButton fx:id="kokSEM9" layoutX="546.0" layoutY="146.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 25px; -fx-background-color: red;" text=" " />
    </children>
 </AnchorPane>
