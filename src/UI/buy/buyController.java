@@ -1,5 +1,7 @@
 package UI.buy;
 
+import Networking.DBManager;
+import Networking.Tickets;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import javafx.event.ActionEvent;
@@ -16,6 +18,7 @@ import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class buyController {
 
@@ -751,6 +754,13 @@ public class buyController {
         }
 
         return (FinalDay+"-"+FinalMonth+"-"+FinalYear);
+    }
+
+    @FXML
+    void buy1(ActionEvent event) {
+        Tickets newTicket = new Tickets(1, "LOL", 123, 123, CompanyName1, 1, 1, DatePicker.getValue(), LocalTime.now(), DatePicker.getValue(), LocalTime.now(), "Hello");
+        DBManager addNewTicket = new DBManager();
+        addNewTicket.addTicket(newTicket);
     }
 
 }

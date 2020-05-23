@@ -2,6 +2,8 @@ package UI.chat;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -19,7 +21,7 @@ public class ChatController {
     private AnchorPane root;
 
     @FXML
-    private TextField inputText;
+    private TextArea inputText;
 
     @FXML
     private TextArea outputText;
@@ -33,6 +35,11 @@ public class ChatController {
         outputText.insertText(0, "\nMe: " + inputText.getText());}
         inputText.setText("");
 
+    }
+
+    @FXML
+    void BackAction(ActionEvent event) throws IOException {
+        root.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/UI/main/main.fxml")));
     }
 
     @FXML

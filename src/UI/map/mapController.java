@@ -13,6 +13,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class mapController {
 
@@ -27,6 +29,9 @@ public class mapController {
 
     @FXML
     private JFXComboBox ToPicker;
+
+    @FXML
+    private JFXComboBox TypePicker;
 
     @FXML
     private JFXButton showInfo;
@@ -115,6 +120,29 @@ public class mapController {
     @FXML
     private JFXButton ataSHY6;
 
+    @FXML
+    private JFXButton kokNURsem2;
+
+    @FXML
+    private JFXButton kokNURsem3;
+
+    @FXML
+    private JFXButton kokSEM4;
+
+    @FXML
+    private JFXButton kokSEM5;
+
+    @FXML
+    private JFXButton kokSEM6;
+
+    @FXML
+    private JFXButton kokSEM7;
+
+    @FXML
+    private JFXButton kokSEM8;
+
+    @FXML
+    private JFXButton kokSEM9;
 
     @FXML
     public void initialize() {
@@ -146,14 +174,17 @@ public class mapController {
         ataSHY4.setVisible(false);
         ataSHY5.setVisible(false);
         ataSHY6.setVisible(false);
+        kokNURsem2.setVisible(false);
+        kokNURsem3.setVisible(false);
+        kokSEM4.setVisible(false);
+        kokSEM5.setVisible(false);
+        kokSEM6.setVisible(false);
+        kokSEM7.setVisible(false);
+        kokSEM8.setVisible(false);
+        kokSEM9.setVisible(false);
     }
 
-    @FXML
-    void ShowInfo(ActionEvent event) {
-        if(FromPicker.getValue().equals("Almaty")&&(ToPicker.getValue().equals("Nur-Sultan"))){
-            ataNUR5.setVisible((true));
-        }
-    }
+
 
     @FXML
     void BackAction(ActionEvent event) throws IOException {
@@ -184,4 +215,132 @@ public class mapController {
         }
     }
 
+    @FXML
+    void typeClicked(MouseEvent event) {
+        if(TypePicker.getItems().isEmpty()) {
+            TypePicker.getItems().addAll(
+                    "Platzkart",
+                    "Coupe",
+                    "'Talgo'");
+        }
+    }
+
+    @FXML
+    void ShowInfo(ActionEvent event) {
+        int travelTime;
+        LocalTime nowTime = LocalTime.now();
+        if(FromPicker.getValue().equals("Almaty")&&(ToPicker.getValue().equals("Nur-Sultan"))&&(TypePicker.getValue().equals("Platzkart"))){
+            if((nowTime.getHour()*60+nowTime.getMinute()>=7*60+3) && (nowTime.getHour()*60+nowTime.getMinute())<=17*60+27){
+                travelTime = (nowTime.getHour()*60+nowTime.getMinute()-7*60+3)/60;
+                if((nowTime.getHour()*60+nowTime.getMinute()-7*60+3)%60 > 30){travelTime++;}
+                if(travelTime==0){initialize(); ata.setVisible(true); ast.setVisible(true);}
+                if(travelTime==1){initialize(); ata.setVisible(true); ast.setVisible(true); ataNURshy2.setVisible(true);}
+                if(travelTime==2){initialize(); ata.setVisible(true); ast.setVisible(true); ataNURshy3.setVisible(true);}
+                if(travelTime==3){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR4.setVisible(true);}
+                if(travelTime==4){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR5.setVisible(true);}
+                if(travelTime==5){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR6.setVisible(true);}
+                if(travelTime==6){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR7.setVisible(true);}
+                if(travelTime==7){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR8.setVisible(true);}
+                if(travelTime==8){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR9.setVisible(true);}
+                if(travelTime==9){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR10.setVisible(true);}
+                if(travelTime==10){initialize(); ata.setVisible(true); ast.setVisible(true);}
+                travelTime=0;
+            }
+        }
+        if(FromPicker.getValue().equals("Almaty")&&(ToPicker.getValue().equals("Nur-Sultan"))&&(TypePicker.getValue().equals("Coupe"))){
+            if((nowTime.getHour()*60+nowTime.getMinute()>=9*60+18) && (nowTime.getHour()*60+nowTime.getMinute())<=19*60+20){
+                travelTime = (nowTime.getHour()*60+nowTime.getMinute()-9*60+18)/60;
+                if((nowTime.getHour()*60+nowTime.getMinute()-9*60+18)%60 > 30){travelTime++;}
+                if(travelTime==0){initialize(); ata.setVisible(true); ast.setVisible(true);}
+                if(travelTime==1){initialize(); ata.setVisible(true); ast.setVisible(true); ataNURshy2.setVisible(true);}
+                if(travelTime==2){initialize(); ata.setVisible(true); ast.setVisible(true); ataNURshy3.setVisible(true);}
+                if(travelTime==3){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR4.setVisible(true);}
+                if(travelTime==4){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR5.setVisible(true);}
+                if(travelTime==5){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR6.setVisible(true);}
+                if(travelTime==6){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR7.setVisible(true);}
+                if(travelTime==7){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR8.setVisible(true);}
+                if(travelTime==8){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR9.setVisible(true);}
+                if(travelTime==9){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR10.setVisible(true);}
+                if(travelTime==10){initialize(); ata.setVisible(true); ast.setVisible(true);}
+                travelTime=0;
+
+            }
+        }
+        if(FromPicker.getValue().equals("Almaty")&&(ToPicker.getValue().equals("Nur-Sultan"))&&(TypePicker.getValue().equals("'Talgo'"))){
+            if((nowTime.getHour()*60+nowTime.getMinute()>=10*60+33) && (nowTime.getHour()*60+nowTime.getMinute())<=18*60+15){
+                travelTime = (nowTime.getHour()*60+nowTime.getMinute()-10*60+33)/60;
+                if((nowTime.getHour()*60+nowTime.getMinute()-10*60+33)%60 > 30){travelTime++;}
+                if(travelTime==0){initialize(); ata.setVisible(true); ast.setVisible(true);}
+                if(travelTime==1){initialize(); ata.setVisible(true); ast.setVisible(true); ataNURshy2.setVisible(true);}
+                if(travelTime==2){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR4.setVisible(true);}
+                if(travelTime==3){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR5.setVisible(true);}
+                if(travelTime==4){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR6.setVisible(true);}
+                if(travelTime==5){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR7.setVisible(true);}
+                if(travelTime==6){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR9.setVisible(true);}
+                if(travelTime==7){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR10.setVisible(true);}
+                if(travelTime==8){initialize(); ata.setVisible(true); ast.setVisible(true);}
+                travelTime=0;
+
+            }
+        }
+
+        if(FromPicker.getValue().equals("Nur-sultan")&&(ToPicker.getValue().equals("Almaty"))&&(TypePicker.getValue().equals("Platzkart"))){
+            int x = 17, y = 57, w = 4, z = 21;
+            if((nowTime.getHour()*60+nowTime.getMinute()>=x*60+y) && (nowTime.getHour()*60+nowTime.getMinute())<=w*60+z){
+                travelTime = (nowTime.getHour()*60+nowTime.getMinute()-x*60+y)/60;
+                if((nowTime.getHour()*60+nowTime.getMinute()-x*60+y)%60 > 30){travelTime++;}
+                if(travelTime==10){initialize(); ata.setVisible(true); ast.setVisible(true);}
+                if(travelTime==9){initialize(); ata.setVisible(true); ast.setVisible(true); ataNURshy2.setVisible(true);}
+                if(travelTime==8){initialize(); ata.setVisible(true); ast.setVisible(true); ataNURshy3.setVisible(true);}
+                if(travelTime==7){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR4.setVisible(true);}
+                if(travelTime==6){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR5.setVisible(true);}
+                if(travelTime==5){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR6.setVisible(true);}
+                if(travelTime==4){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR7.setVisible(true);}
+                if(travelTime==3){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR8.setVisible(true);}
+                if(travelTime==2){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR9.setVisible(true);}
+                if(travelTime==1){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR10.setVisible(true);}
+                if(travelTime==0){initialize(); ata.setVisible(true); ast.setVisible(true);}
+                travelTime=0;
+
+            }
+        }
+        if(FromPicker.getValue().equals("Nur-sultan")&&(ToPicker.getValue().equals("Almaty"))&&(TypePicker.getValue().equals("Coupe"))){
+            int x = 19, y = 50, w = 5, z = 52;
+            if((nowTime.getHour()*60+nowTime.getMinute()>=x*60+y) && (nowTime.getHour()*60+nowTime.getMinute())<=w*60+z){
+                travelTime = (nowTime.getHour()*60+nowTime.getMinute()-x*60+y)/60;
+                if((nowTime.getHour()*60+nowTime.getMinute()-x*60+y)%60 > 30){travelTime++;}
+                if(travelTime==10){initialize(); ata.setVisible(true); ast.setVisible(true);}
+                if(travelTime==9){initialize(); ata.setVisible(true); ast.setVisible(true); ataNURshy2.setVisible(true);}
+                if(travelTime==8){initialize(); ata.setVisible(true); ast.setVisible(true); ataNURshy3.setVisible(true);}
+                if(travelTime==7){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR4.setVisible(true);}
+                if(travelTime==6){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR5.setVisible(true);}
+                if(travelTime==5){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR6.setVisible(true);}
+                if(travelTime==4){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR7.setVisible(true);}
+                if(travelTime==3){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR8.setVisible(true);}
+                if(travelTime==2){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR9.setVisible(true);}
+                if(travelTime==1){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR10.setVisible(true);}
+                if(travelTime==0){initialize(); ata.setVisible(true); ast.setVisible(true);}
+                travelTime=0;
+
+            }
+        }
+        if(FromPicker.getValue().equals("Nur-sultan")&&(ToPicker.getValue().equals("Almaty"))&&(TypePicker.getValue().equals("Coupe"))){
+            int x = 18, y = 45, w = 2, z = 27;
+            if((nowTime.getHour()*60+nowTime.getMinute()>=x*60+y) && (nowTime.getHour()*60+nowTime.getMinute())<=w*60+z){
+                travelTime = (nowTime.getHour()*60+nowTime.getMinute()-x*60+y)/60;
+                if((nowTime.getHour()*60+nowTime.getMinute()-x*60+y)%60 > 30){travelTime++;}
+                if(travelTime==8){initialize(); ata.setVisible(true); ast.setVisible(true);}
+                if(travelTime==7){initialize(); ata.setVisible(true); ast.setVisible(true); ataNURshy2.setVisible(true);}
+                if(travelTime==6){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR4.setVisible(true);}
+                if(travelTime==5){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR5.setVisible(true);}
+                if(travelTime==4){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR6.setVisible(true);}
+                if(travelTime==3){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR7.setVisible(true);}
+                if(travelTime==2){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR9.setVisible(true);}
+                if(travelTime==1){initialize(); ata.setVisible(true); ast.setVisible(true); ataNUR10.setVisible(true);}
+                if(travelTime==0){initialize(); ata.setVisible(true); ast.setVisible(true);}
+                travelTime=0;
+
+            }
+        }
+    }
 }

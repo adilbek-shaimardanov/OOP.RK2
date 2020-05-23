@@ -82,7 +82,7 @@
             <Text fx:id="CompanyName1" strokeType="OUTSIDE" strokeWidth="0.0" text="CompanyName" translateX="30.0" translateY="-20.0" />
             <ImageView fx:id="CompanyLogo1" fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true" translateX="-80.0" translateY="-20.0" />
             <Text fx:id="Date1" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" translateX="140.0" translateY="-22.0" />
-            <JFXButton fx:id="BuyButton1" ripplerFill="BLACK" style="-fx-background-color: #941db8; -fx-font-weight: bold;" text="Buy" textFill="WHITE" translateX="540.0" translateY="17.0" />
+            <JFXButton fx:id="BuyButton1" onAction="#buy1" ripplerFill="BLACK" style="-fx-background-color: #941db8; -fx-font-weight: bold;" text="Buy" textFill="WHITE" translateX="540.0" translateY="17.0" />
             <Text fx:id="Time1" strokeType="OUTSIDE" strokeWidth="0.0" text="Time" translateX="54.0" translateY="5.0" wrappingWidth="89.66133117675781">
                <font>
                   <Font size="24.0" />
